@@ -1,0 +1,49 @@
+[
+            {
+                    "hotel_id":1,
+                    "name":"Maria",
+                    "image":"img/1.png"
+            },
+            {
+                    "hotel_id":2,
+                    "name":"Adam",
+                    "image":"img/2.png"
+            },
+            {
+                    "hotel_id":3,
+                    "name":"Karry",
+                    "image":"img/3.png"
+            },
+            {
+                    "hotel_id":4,
+                    "name":"Yaroslav",
+                    "image":"img/4.png"
+            },
+            {
+                   "hotel_id":5,
+                    "name":"Alisa",
+                    "image":"img/5.png"
+            },
+            {
+                    "hotel_id":6,
+                    "name":"Kristian",
+                    "image":"img/6.png"
+            },
+            {
+                    "hotel_id":7,
+                    "name":"Tony",
+                    "image":"img/7.png"
+            },
+            {
+                    "hotel_id":8,
+                    "name":"Erick",
+                    "image":"img/8.png"
+            },
+            {
+                    "hotel_id":9,
+                    "name":"Madalena",
+                    "image":"img/9.png"
+            }
+
+    
+]

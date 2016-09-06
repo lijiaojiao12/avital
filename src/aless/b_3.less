@@ -1,0 +1,122 @@
+.pos(a){
+	position:absolute;
+}
+.pos(r){
+	position:relative;
+}
+.pos(f){
+	position:fixed;
+}
+#b_box3{
+	width:100%;
+	height:100%;
+	.b_header{
+		width:100%;
+		height:45px;
+		line-height:45px;
+		.pos(r);
+		background:#000;
+		h4{
+			width:100%;
+			text-align:center;
+			color:#fff;
+			font-size:18px;
+		}
+		.back{
+			.pos(a);
+			left:15px;
+			top:15px;
+			color:#fff;
+		}
+		.b_heart{
+			.pos(a);
+			right:42px;
+			top:15px;
+			color:#da395b;
+		}
+		.b_ellipsis{
+			.pos(a);
+			right:12px;
+			top:15px;
+			color:#5a8a8c;
+		}
+	}
+	.b_da{
+		width:100%;
+		height:100%;
+		overflow:auto;
+	}
+	.b_banner{
+		width:100%;
+		height:116px;
+		background:#f5f3f8;
+		line-height:116px;
+		dl{
+			width:100%;
+			dt{
+				width:80px;
+				float:left;
+				margin:17px 12px 0 15px;
+				img{
+					display:block;
+					width:100%;
+					height:100%;
+				}
+			}
+			dd{
+				width:60%;
+				float:left;
+				p{
+					color:#c0bdc4;
+					font-size:14px;
+				}
+			}
+		}
+	}
+	.b_yan{
+		width:100%;
+		div{
+			width:100%;
+			height:40px;
+			line-height:40px;
+			border-bottom:1px solid #a6a4a9;
+			span{
+				float:left;
+				padding-left:10px;
+				color:#a6a4a9;
+				font-size:14px;
+			}
+			.b_inputs{
+				float:right;
+				margin-top:9px;
+				font-size:14px;
+				font-weight:bold;
+				margin-right: 8px;
+    			text-align: right;
+			}
+		}
+		div{
+			font-size:14px;
+			position:relative;
+			label{
+				font-size:0;
+				display:inline-block;
+				width:45px;
+				height:22px;
+				background:url(../img/b_btn.png) no-repeat;
+				background-size:65px 22px;
+				border-radius:10px;
+				position:absolute;
+				right:5px;
+				top:9px;
+				-webkit-transition:all .5s;
+			}
+			
+			input:checked{
+				&+label{
+					background-position:-20px 0;
+				}
+			}
+		}
+	}
+}

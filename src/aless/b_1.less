@@ -1,0 +1,173 @@
+.pos(a){
+	position:absolute;
+}
+.pos(r){
+	position:relative;
+}
+.pos(f){
+	position:fixed;
+}
+a{
+	border:none;
+}
+#b_box1{
+	width:100%;
+	height:100%;
+	.right{
+		width:100%;
+		height:100%;
+		background:url(../img/bg.jpg) no-repeat;
+		background-size:100% 100%;
+		.b_header{
+			width:100%;
+			height:45px;
+			line-height:45px;
+			.pos(r);
+			h4{
+				width:100%;
+				text-align:center;
+				color:#fff;
+				font-size:18px;
+			}
+			.back{
+				.pos(a);
+				left:15px;
+				top:15px;
+				color:#fff;
+			}
+			.b_heart{
+				.pos(a);
+				right:42px;
+				top:15px;
+				color:#fff;
+			}
+			.b_ellipsis{
+				.pos(a);
+				right:12px;
+				top:11px;
+				color:#fff;
+				font-size:20px;
+			}
+		}
+		.b_main{
+			width:100%;
+			height:80%;
+			text-align:center;
+			overflow:hidden;
+			h3{
+				text-align:center;
+				margin-top:60%;
+				color:#fff;
+				font-size:20px;
+				height:44px;
+				line-height:44px;
+			}
+			p{
+				text-align:center;
+				color:#fff;
+				font-size:14px;
+			}
+			ul{
+				width:100%;
+				text-align:center;
+				margin-top:25px;
+				li{
+					width:33.3%;
+					float:left;
+					line-height:20px;
+					span{
+						display:block;
+						font-size:12px;
+						color:#fff;
+					}
+					.num{
+						font-size:16px;
+					}
+				}
+			}
+			.b_btn{
+				width:126px;
+				height:38px;
+				background:#f00dd8;
+				border-radius:45px;
+				border:none;
+				outline:none;
+				color:#fff;
+				font-size:16px;
+				text-align:center;
+				margin-top:15px;
+			}
+		}
+		.b_footer{
+			width:100%;
+			height:45px;
+			background:#fff;
+			position:absolute;
+			bottom:0;
+			ul{
+				width:100%;			
+				text-align:center;
+				li{
+					width:20%;
+					float:left;
+					line-height:45px;
+					border-right:1px solid #ccc;
+					a{
+						color:#615d66;
+					}
+					
+				}
+			}
+		}
+	}
+	.left{
+		width: 70%;
+		height: 100%;
+		z-index: 999;
+		text-indent: 10px;
+		position: absolute;
+		top: 0;
+		left: -70%;
+		background: #6717f9;
+		dl{
+			margin-top: 10px;
+			dt{
+				float: left;
+				img{
+					width: 66px;
+					height: auto;
+				}
+			}
+			dd{
+				float: left;
+				h5{
+					color: #fff;
+					font-size: 14px;
+					font-weight: bold;
+					margin-top: 18px;
+				}
+				p{
+					color: #98969b;
+					font-size: 12px;
+					line-height: 25px;
+				}
+			}
+		}
+		ul{
+			clear: both;
+			margin-top: 20px;
+			li{
+				line-height: 2.5;
+				color: #fff;
+				span{
+					color: #878689;
+					font-size: 14px;
+				}
+			}
+		}
+		.out{
+			margin-top: 40px;
+			color: #fff;
+		}
+	}
+}

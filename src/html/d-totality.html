@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+</head>
+<body>
+	<div class="container-tota">
+		<div class="header-tota">
+			<span class="d-back-list">
+				<img src="../img/d-back.png" alt="">
+			</span>
+			<h3 class="d-media">爱过谁都这样</h3>
+			<span class="d-search-list">
+				<img src="../img/d-search.png" alt="">
+			</span> 
+		</div>
+		<div class="main-tota">
+			<audio id="audio" src="../music/爱过谁都这样.mp3" autoplay=""></audio>
+			<div class="tota-btn">
+				<a href="d-media.html"><img src="../img/d-img3.png" alt=""></a>
+			</div>
+			<div class="d-btn">
+				<img src="../img/d-order.png" alt="" class="d-order">
+				<img src="../img/d-preve.png" alt=""  class="d-preve">
+				<img src="../img/d-star.png" alt="" class="d-star" id="stop">
+				<img src="../img/d-next.png" alt="" class="d-next">
+				<img src="../img/d-repeat.png" alt="" class="d-repeat">
+			</div>
+			<div class="tota-sing-list">
+				<ul>
+					<li class="bg"><img src="../img/d-start.png" alt="">爱过谁都这样</li>
+					<li><img src="../img/d-start.png" alt="">情非得已</li>
+					<li><img src="../img/d-start.png" alt="">闹够了没有</li>
+					<li><img src="../img/d-start.png" alt="">MaMa</li>
+					<li><img src="../img/d-start.png" alt="">Call me baby</li>
+					<li><img src="../img/d-start.png" alt="">下个路口再见</li>
+					<li><img src="../img/d-start.png" alt="">野蛮生长</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="../lib/jquery.js"></script>
+	<script>
+		$(".d-back-list").on("click",function(){
+			location.href="d-playlist.html";
+		})
+		var arr=['爱过谁都这样','情非得已','闹够了没有','MaMa','Call me baby','下个路口再见'];
+		var a=0;
+		$(".d-next").on("click",function(){
+			$("#stop").attr("src","../img/d-star.png");
+			a++;
+			if(a<=arr.length-1){
+				$("#audio").attr("src","../music/"+arr[a]+".mp3");
+				$("#audio")[0].play();
+				$('.d-media').html(arr[a]);
+				$(".tota-sing-list ul li").eq(a).addClass("bg").siblings().removeClass("bg");
+			}else{
+				a=0;
+				$("#audio").attr("src","../music/"+arr[a]+".mp3");
+				$("#audio")[0].play();
+				$('.d-media').html(arr[a]);
+				$(".tota-sing-list ul li").eq(a).addClass("bg").siblings().removeClass("bg");
+			}
+		});
+		$(".d-preve").on("click",function(){
+			$("#stop").attr("src","../img/d-star.png");
+			a--;
+			if(a<=arr.length-1){
+				$("#audio").attr("src","../music/"+arr[a]+".mp3");
+				$("#audio")[0].play();
+				$('.d-media').html(arr[a]);
+				$(".tota-sing-list ul li").eq(a).addClass("bg").siblings().removeClass("bg");
+			}else{
+				a=0;
+				$("#audio").attr("src","../music/"+arr[a]+".mp3");
+				$("#audio")[0].play();
+				$('.d-media').html(arr[a]);
+				$(".tota-sing-list ul li").eq(a).addClass("bg").siblings().removeClass("bg");
+			}
+		});
+
+		$(".tota-sing-list ul li").on("click",function(){
+			$("#stop").attr("src","../img/d-star.png");
+			$(this).addClass("bg").siblings().removeClass("bg");
+			var a=$(this).text();
+			$('.d-media').html(a);
+			var src="../music/"+a+".mp3";
+			//设置路径
+			$("#audio").attr('src',src);
+			//播放
+			$("#audio")[0].play();
+			$(".left dl dd h3").html(a);
+			$(".right a").on("click",function(){
+				//console.log($("#audio")[0].paused);
+				if($("#audio")[0].paused){
+					$("#audio")[0].play();
+					$(".pause").show();
+					$(".play").hide();
+				}else{
+					$("#audio")[0].pause();
+					$(".pause").hide();
+					$(".play").show();
+				}
+			})
+			$("#audio")[0].addEventListener("timeupdate",function(){
+				/*console.log(this.currentTime);*/
+				var current=parseInt(this.currentTime/this.duration*100)+"%";
+				//console.log(current);
+				$("#scheduleTime").width(current);
+			})
+		});
+		var stop=document.getElementById("stop");
+		var audio=document.getElementById("audio");
+		stop.onclick=function(){
+			this.src="../img/d-star.png";
+			if(!audio.paused){
+				audio.pause();
+				this.src="../img/d-stop.png";
+			}else{
+				audio.play();
+			}
+		};
+	</script>
+</body>
+</html>

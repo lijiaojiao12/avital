@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/dswiper.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+</head>
+<body>
+	<div class="container-list">
+		<div class="header-list">
+			<span class="d-back-list">
+				<a href="b_1.html"><img src="../img/d-back.png" alt=""></a>
+			</span>
+			<h3 class="d-media">Playlist</h3>
+			<span class="d-search-list">
+				<img src="../img/d-search.png" alt="">
+			</span>
+		</div>
+		<div class="main-list">
+			<div class="d-pic">
+				<div class="lunbo" style="height:136px">
+					<div class="swiper-container" style="height:136px !important">
+					    <div class="swiper-wrapper" style="height:136px">
+					        <div class="swiper-slide"><img src="../img/d-img1.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img2.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img3.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img4.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img5.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img6.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img7.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img8.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img9.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img10.png" alt=""></div>
+					    </div>
+					</div>
+				</div>
+				<div class="lyrics">
+					<h4>The Path of Totality</h4>
+					<h6>KORN</h6>
+				</div>
+			</div>
+			<div class="d-list">
+				<ul>
+					<li><a href="d-totality.html">爱过谁都这样</a></li>
+					<li><a href="d-totality.html">情非得已</a></li>
+					<li><a href="d-totality.html">闹够了没有</a></li>
+					<li><a href="d-totality.html">MaMa</a></li>
+					<li><a href="d-totality.html">Call me baby</a></li>
+					<li><a href="d-totality.html">下个路口再见</a></li>
+					<li><a href="d-totality.html">野蛮生长</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="../lib/jquery.js"></script>
+	<!--<script src="../lib/require.js" data-main="../main"></script>-->
+	<script src="../lib/swiper.min.js"></script>
+	<script>
+
+		
+		var swiper = new Swiper('.swiper-container', {
+		    pagination: '.swiper-pagination',
+		    effect: 'coverflow',
+		    grabCursor: true,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    coverflow: {
+		        rotate: 50,
+		        stretch: 0,
+		        depth: 100,
+		        modifier: 1,
+		        slideShadows : true
+		    }
+		});
+	</script>
+</body>
+</html>

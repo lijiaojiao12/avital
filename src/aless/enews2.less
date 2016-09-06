@@ -1,0 +1,169 @@
+#news2{
+	a{
+		border: none;
+	}
+	.header{
+		height: 45px;
+		width: 100%;
+		text-align: center;
+		line-height: 45px;
+		position: relative;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		background: #1d1822;
+		a{
+			top:70%;
+		}
+		span{
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: bold;
+		}
+		.e-back{
+			width: 15px;
+			height: 16px;
+			background: url(../img/e-back.png) no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: 3%;
+			top: 70%;
+			margin-top: -8px;
+		}
+		.e-more{
+			width: 20px;
+			height: 4px;
+			background: url(../img/e-more.png) no-repeat;
+			background-size: contain;
+			position: absolute;
+			right: 3%;
+			top: 70%;
+			margin-top: -2px;
+		}
+	}
+	.e-list{
+		width: 96%;
+		height: 89%;
+		margin-left: 2%;
+		background: #fff;
+		border-radius: 5px;
+		overflow: auto;
+		h1{
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 10px;
+		}
+		.e-content{
+			width: 96%;
+			margin-left: 2%;
+			ul{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				position: relative;
+				li{
+					float: left;
+					color: #cecdce;
+					font-size: 14px;
+					font-family: "宋体";
+				}
+				.e-time{
+
+					&:before{
+						content:" ";
+						width: 14px;
+						height: 14px;
+						display: inline-block;
+						vertical-align:text-bottom;
+						background: url(../img/e-clock.png) no-repeat;
+						background-size: contain;
+						margin-right: 5px;
+					}
+				}
+				.e-gps{
+					margin-left: 40px;
+					&:before{
+						content:" ";
+						width: 11px;
+						height: 14px;
+						display: inline-block;
+						vertical-align:text-bottom;
+						background: url(../img/e-gps.png) no-repeat;
+						background-size: contain;
+						margin-right: 5px;
+					}
+				}
+				.e-heart{
+					margin-left: 20px;
+					img{
+						width: 16px;
+						height: 13px;
+						vertical-align: text-bottom;
+					}
+				}
+			}
+		}
+		.e-video{
+			width: 100%;
+			#vid{
+				margin: 10px 0 10px 0;
+			}
+			p{
+				font-size: 12px;
+				color: #a8a7aa;
+				margin-bottom: 10px;
+				display: block;
+			}
+		}
+		.e-person{
+			width: 100%;
+			dl{
+				dt{
+					float: left;
+					img{
+						width: 36px;
+						height: auto;
+					}
+				}
+				dd{
+					float: left;
+					margin-left: 10px;
+					h6{
+						font-size: 12px;
+						color: #000;
+						line-height: 18px;
+						margin-top: 5px;
+					}
+					p{
+						font-size: 12px;
+						color: #a8a7aa;
+						line-height: 18px;
+					}
+				}
+			}
+			.e-sd{
+				float: right;
+				margin-right: 5px;
+				line-height: 40px;
+				&:before{
+					content:" ";
+					width: 9px;
+					height: 16px;
+					display: inline-block;
+					vertical-align:text-bottom;
+					background: url(../img/e-light.png) no-repeat;
+					background-size: contain;
+					margin-right: 5px;
+				}
+			}
+			div{
+				clear: left;
+				font-size: 12px;
+				color: #a8a7aa;
+				padding-top: 10px;
+				display: block;
+			}
+		}
+	}
+}

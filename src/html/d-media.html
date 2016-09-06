@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/main.css">	
+	<link rel="stylesheet" href="../css/dswiper.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+</head>
+<body>
+	<div class="container">
+		<audio src="../music/1.mp3" id="audio" class="audio"></audio>
+		<div class="header">
+			<span class="d-back">
+				<a href="d-totality.html"><img src="../img/d-back.png" alt=""></a>
+			</span>
+			<h3 class="d-media">Media</h3>
+			<span class="d-search">
+				<img src="../img/d-search.png" alt="">
+			</span>
+		</div>
+		<div class="main">
+			<div class="d-pic">
+				<div class="seam">
+					<div class="swiper-container swiper-container-v" style="    height: 206px !important;">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide"><img src="../img/d-img1.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img2.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img3.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img4.png" alt=""></div>
+					        <div class="swiper-slide"><img src="../img/d-img5.png" alt=""></div>
+					    </div>
+					</div>
+				</div>
+			</div>		
+			<div class="d-btn">
+				<img src="../img/d-order.png" alt="" class="d-order">
+				<img src="../img/d-preve.png" alt="" class="preve">
+				<img src="../img/d-stop.png" alt="" class="d-stop" id="stop">
+				<img src="../img/d-star.png" alt="" class="d-star" style="display:none">
+				<img src="../img/d-next.png" alt="" class="next">
+				<img src="../img/d-repeat.png" alt="" class="d-repeat">
+			</div>
+			<div class="d-lyric">
+				<h6>KORN</h6>
+				<h4>The Path of Totalitl</h4>
+				<h6>The Parading Shift (2013)</h6>
+			</div>
+			<div class="scheduleBox">
+				<div class="scheduleTime" id="scheduleTime"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="../lib/swiper.min.js"></script>
+	<script src="../lib/jquery.js"></script>
+	
+	<script>
+		var stop=document.getElementById("stop");
+		var audio=document.getElementById("audio");
+		stop.onclick=function(){
+			this.src="../img/d-star.png";
+			if(!audio.paused){
+				audio.pause();
+				this.src="../img/d-stop.png";
+			}else{
+				audio.play();
+			}
+		};
+	
+		var swiperH = new Swiper('.swiper-container-h', {
+		    pagination: '.swiper-pagination-h',
+		    paginationClickable: true,
+		    spaceBetween: 50
+		});
+
+		var a=1;
+		$(".next").on("click",function(){
+			$("#stop").attr("src","../img/d-star.png");
+			a++;
+			if(a<=5){
+				$(".audio").attr("src","../music/"+a+".mp3");
+				$(".audio")[0].play();
+			}else{
+				a=1;
+				$(".audio").attr("src","../music/"+a+".mp3");
+				$(".audio")[0].play();
+			}
+			
+		});
+		$(".preve").on("click",function(){
+			a--;
+			if(a<=5){
+				$(".audio").attr("src","../music/"+a+".mp3");
+				$(".audio")[0].play();
+			}else{
+				a=1;
+				$(".audio").attr("src","../music/"+a+".mp3");
+				$(".audio")[0].play();
+			}
+			
+		})
+
+		$("#audio")[0].addEventListener("timeupdate",function(){
+			/*console.log(this.currentTime);*/
+			var current=parseInt(this.currentTime/this.duration*100)+"%";
+			//console.log(current);
+			$("#scheduleTime").width(current);
+		})
+
+		$(".scheduleBox").on("click",function(e){
+			var X=e.pageX;
+			var W=$(".scheduleBox").width();
+			var aa=X/W*100;
+			
+			$("#audio").get(0).currentTime=$("#audio").get(0).duration*(aa/100);
+
+		})
+
+		
+		$(".scheduleBox").get(0).addEventListener("touchmove",function(e){
+		var _touch=e.touches[0];
+		var X=_touch.pageX;
+			var W=$(".scheduleBox").width();
+			var aa=X/W*100;
+			
+			$("#audio").get(0).currentTime=$("#audio").get(0).duration*(aa/100);
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--让IE以最新的内核渲染 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<!--让视口宽度为设备宽度,不允许用户缩放 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--不自动识别电话号码和邮编 -->
+	<meta name="format-detection" content="telephone=no,email=no"/>
+	<!--开启对webapp的支持 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--强制全屏显示 -->
+	<meta name="full-screen" content="yes">
+	<!--禁止浏览器从缓存中访问页面内容 -->
+	<meta http-equiv="Pragma" content="no-cache">
+	<!--web app 应用下状态(屏幕顶部条)的颜色,默认值为 default(白色) -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+	<div class="manu">
+	    <header class="header">
+	        <a href="test3.html"><img src="../img/header_03.png"></a>
+	        <h1>Search</h1>
+	        <a href="#"><img src="../img/header_06.png"></a>
+	    </header>
+	    <section class="test_content" id="wrapper">
+            <div id="scroller">
+                <div class="test_box">
+                    <input type="text" placeholder="boots">
+                </div>
+                <div class="test2_box" id="news-lists">
+                    <dl>
+                        <dt><img src="../img/Menu_03.png"></dt>
+                        <dd>
+                            <h2>NIKE</h2>
+                            <p>Free 4.0 Fryknit</p>
+                            <span>99$</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="../img/Menu_06.png"></dt>
+                        <dd>
+                            <h2>NIKE</h2>
+                            <p>Free 2.0 Print</p>
+                            <span>188$</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="../img/Menu_08.png"></dt>
+                        <dd>
+                            <h2>NIKE</h2>
+                            <p>Free Sport JVX</p>
+                            <span>255$</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="../img/Menu_10.png"></dt>
+                        <dd>
+                            <h2>NIKE</h2>
+                            <p>Free Fryknit N SW Trial</p>
+                            <span>390$</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div id="pullUp">
+                    <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+                </div>
+            </div>
+	    </section>
+	</div>
+</body>
+</html>
+<script src="../lib/require.js" data-main="../main"></script>
